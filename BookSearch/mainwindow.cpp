@@ -132,6 +132,10 @@ void MainWindow::on_btnSearch_clicked()
 
         }
 
+        if(count == 0){
+            QMessageBox::warning(this, "Invalid search", "No books found with the search perameters. Please enter again.");
+        }
+
         // Set the search results widget as the widget for the scroll area
         ui->scrollAreaResults->setWidget(resultsWidget);
         // Displays the total amount of books in a status bar
